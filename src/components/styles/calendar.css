@@ -1,0 +1,91 @@
+.css-hlj6pa-MuiDialogActions-root {
+    display: none !important;
+  }
+
+.css-3jvy96-MuiTypography-root-MuiDatePickerToolbar-title{
+    display: none !important;
+}
+
+.css-z3au5x-MuiButtonBase-root-MuiIconButton-root-MuiPickersToolbar-penIconButton{
+    display: none !important;
+}
+
+  
+  .css-j88s13-MuiPickersToolbar-root-MuiDatePickerToolbar-root
+    .MuiPickersToolbar-penIconButton {
+    display: none !important;
+  }
+  
+  .css-j88s13-MuiPickersToolbar-root-MuiDatePickerToolbar-root {
+    padding: 0 !important;
+  }
+  
+  .css-1eurbeq-MuiPickersToolbar-root-MuiDatePickerToolbar-root{
+    display: none;
+  }
+  
+  .css-1hbyad5-MuiTypography-root {
+    display: none !important;
+  }
+  
+  .css-bkrceb-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+    background-color: rgb(0, 166, 255) !important;
+  }
+  
+  .css-195y93z-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+    background-color: rgb(0, 166, 255) !important;
+    color: black !important;
+  }
+  .css-195y93z-MuiButtonBase-root-MuiPickersDay-root:not(.Mui-selected) {
+    border-color: rgb(0, 166, 255) !important;
+    color: rgb(0, 166, 255);
+  }
+  
+  .css-144dnr3-MuiBadge-badge {
+    color: rgb(217, 60, 107);
+  }
+  
+  .css-1n2mv2k {
+    background-color: #f4f4f4;
+    margin-bottom: 1rem;
+  }
+
+.css-1eurbeq-MuiPickersToolbar-root-MuiDatePickerToolbar-root{
+    display: none !important;
+}
+
+
+/* .css-bkrceb-MuiButtonBase-root-MuiPickersDay-root{
+    background-color: orange !important;
+    height: 20px !important;
+    width: 20px !important;
+}
+
+.css-195y93z-MuiButtonBase-root-MuiPickersDay-root{
+    background-color: green !important;
+    height: 20px !important;
+    width: 20px !important;
+}
+
+.css-raiqh1-MuiTypography-root-MuiDayPicker-weekDayLabel{
+    background-color: red !important;
+    height: 20px !important;
+    width: 20px !important;
+}
+
+.css-ggw2de-MuiPickersDay-root{
+    background-color: yellow !important;
+    height: 20px !important;
+    width: 20px !important;
+}
+
+
+.css-dplwbx-MuiPickersCalendarHeader-label{
+    background-color: aliceblue;
+    font-size: 12px !important;
+}
+
+.css-10fao8b-MuiPickersCalendarHeader-labelContainer{
+    margin-right: 20px;
+    margin-left: 40px;
+} */

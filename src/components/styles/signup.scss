@@ -1,0 +1,77 @@
+@import "reset";
+
+.signup-page{
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: 'Roboto', sans-serif;
+}
+
+.signup-image, .signup-image img{
+    height: 100vh;
+    width: 50vw;
+    object-fit: cover;
+    object-position: 50% 80%;
+    overflow: hidden;
+    position: relative;
+}
+
+.signup-container{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.welcome-back{
+    margin: 10px 0px;
+}
+
+.hr{
+    width: 30vw; 
+    text-align: center; 
+    border-bottom: 1px solid lightgrey; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+ } 
+ 
+.hr-text{ 
+     background:white; 
+     color: grey;
+     padding:0 10px; 
+     font-size: 12px;
+ }
+
+ .google-icon{
+    height: 20px;
+    margin-right: 20px;
+ }
+
+ h5{
+    color: grey;
+    margin: 15px 0;
+ }
+
+h1{
+    margin: 10px 0;
+}
+
+
+.link{
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+ }
+
+
+ .signup-image a{
+    color: grey;
+    font-size: 0.7rem;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    text-decoration: none;
+ }
+

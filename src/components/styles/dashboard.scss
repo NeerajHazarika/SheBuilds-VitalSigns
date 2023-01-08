@@ -1,0 +1,168 @@
+@import "scrollable-card.css";
+
+.website-title{
+    padding: 0;
+    margin: 0 20px;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.topbar{
+    background-color: rgb(206, 205, 205);
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.website-title{
+    font-size: 0.8rem;
+    position: absolute;
+    left: 0;
+}
+
+
+.user{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.username{
+    font-size: 0.7rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic{
+    background-color: turquoise;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    margin: 0 20px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.dropdown-icon{
+    height: 15px;
+    padding: 8px;
+    margin: 0 20px 0 10px;
+    border-radius: 50%;    
+}
+
+.dropdown-icon:hover{
+    background-color: rgb(181, 181, 181);
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 80vh;
+    width: 100%;
+}
+    
+.parent {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+    
+.div1 { grid-area: 1 / 1 / 3 / 3; }
+.div2 { grid-area: 1 / 3 / 3 / 5; }
+.div3 { grid-area: 3 / 1 / 5 / 3; }
+.div4 { grid-area: 3 / 3 / 5 / 5; }
+.div5 { grid-area: 5 / 1 / 9 / 5; }
+.div6 { grid-area: 1 / 5 / 9 / 9; }
+.div7 { grid-area: 1 / 9 / 5 / 11; }
+.div8 { grid-area: 5 / 9 / 9 / 11; }
+    
+
+
+.greeting h3{
+    margin: 0;
+}
+
+.greeting{
+    padding: 8px 10px;
+}
+
+.patient-info{
+    padding: 8px 10px;
+    h4, h5{
+        margin: 0;
+        padding: 0;
+    }
+    h5{
+        margin-bottom: 10px;
+    }
+}
+
+.health-goals{
+    h4{
+        margin-bottom: 2px;
+    }
+    ul{
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+.calendar-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div3 .scrollable-card, .div4 .scrollable-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    h4, h5{
+        margin: 10px;
+    }
+}
+
+
+.div7 .scrollable-card, .div8 .scrollable-card{
+    ul{
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    li{
+        margin-bottom: 10px;
+    }
+}
+
+.red-li{
+    color: rgb(217, 60, 107);
+    *{
+        color: black;
+    }
+}
+
+
+
+
+
+    
