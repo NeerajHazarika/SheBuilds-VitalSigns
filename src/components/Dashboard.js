@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './styles/dashboard.css'
 import './styles/app-page.css'
 import Navbar from './Navbar'
@@ -11,34 +11,67 @@ const options = {
   day: "numeric",
 };
 
-var name = 'Rikka Takanashi'
-var profilePic = 'https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg'
-var weight = 39
-var height = 160
-var age = 16
-var bloodGroup = 'B+'
-var diet = ["Eat an apple everyday", "Drink 2 litres of water"]
-var exercise = ["Walk 8000 steps", "Do 10 push-ups"]
-
-const appointmentDates = ["2023-01-12 11:00:00", "2023-02-02 11:00:00", "2023-01-04 23:00:00"]
-
-
-const appDates = new Array(appointmentDates.length) 
-var x
-for(var i = 0; i < appointmentDates.length; i++){
-  x = new Date(appointmentDates[i])
-  appDates[i] = x.toLocaleDateString('en-IN', options)
-}
-
 
 const changeDateDetails = (currDate) => {
   Dashboard.currDateDetails(currDate)
-} 
+}
+
+
+
+const Dashboard = () => {
+
+  //email=props.email
+  const [patient, setPatient] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch(`http://127.0.0.1:5000/getDetails?email=abc@xyz.com`);
+      const data = await response.json();
+      //console.log(data)
+      setPatient(data);
+    }
+    fetchData();
+  }, []);
+
+
+  var name = 'Loading..'
+  var profilePic = 'https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg'
+  var weight = 'Loading..'
+  var height = 'Loading..'
+  var age = 'Loading..'
+  var bloodGroup = 'Loading..'
+  var diet = ["Eat an apple everyday", "Drink 2 litres of water"]
+  var exercise = ["Walk 8000 steps", "Do 10 push-ups"]
+
+  var appointmentDates = []
+
+
+  if (patient) {
+    name=patient.name
+    age=patient.age
+    height=patient.height
+    bloodGroup=patient.bloodGroup
+    weight=patient.weight
+    appointmentDates=Object.keys(patient.appointments)
+    if(appointmentDates.length>0)
+    {
+      console.log(appointmentDates)
+    }
+  }
+
+  const appDates = new Array(appointmentDates.length)
+  var x
+  for(var i = 0; i < appointmentDates.length; i++){
+    x = new Date(appointmentDates[i])
+    appDates[i] = x.toLocaleDateString('en-IN', options)
+  }
+
+
 
 const todayDate = new Date()
 const todayAppointment = (appDates.indexOf(todayDate.toLocaleDateString('en-IN', options)) < 0) ? ['No appointments'] : ['get details of ' + todayDate.toLocaleString()]
 
-const Dashboard = () => {
+
 
   const [dateDetails, setdateDetails] = useState(todayAppointment)
   const [selectedDate, setselectedDate] = useState(todayDate.toLocaleDateString('en-IN', options))
